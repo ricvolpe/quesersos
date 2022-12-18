@@ -9,12 +9,7 @@ export default function Task(): JSX.Element {
             <div className={styles.explanation} >
                 Look at the card and reflect how it may represent something about you
             </div>
-            <div>
-                <div className={styles.title} >
-                    Card title
-                </div>
-                <div className={styles.card} />
-            </div>
+            <div className={styles.card}>Card Title</div>
             <Link href="/select">
                 <button>
                     Change task

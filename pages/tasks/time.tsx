@@ -9,12 +9,9 @@ export default function Task(): JSX.Element {
             <div className={styles.explanation} >
                 Look at the cards and reflect how they may represent your past, present and future
             </div>
-            <div>
-                <div className={styles.title} >
-                    Card title
-                </div>
-                <div className={styles.card} />
-            </div>
+            <div className={styles.card}>Past</div>
+            <div className={styles.card}>Present</div>
+            <div className={styles.card}>Future</div>
             <Link href="/select">
                 <button>
                     Change task
