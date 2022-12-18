@@ -39,6 +39,15 @@ a:active {
   color: black;
 }
 
+button {
+  text-align: center;
+  font-family: 'New Tegomin', serif;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
 /* Classes */
 
 .page {

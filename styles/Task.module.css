@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.explanation {
+    font-family: 'New Tegomin', serif;
+}
+
+.card {
+    height: 400px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: 'New Tegomin', serif;
+}

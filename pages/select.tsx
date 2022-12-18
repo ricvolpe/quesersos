@@ -7,11 +7,21 @@ export default function Select() {
     <div className={styles.container}>
       <Title text='Select a task' color='#4D8C52' />
       <div className={styles.menu}>
-        <div className={styles.menuItem}>Self-reflect</div>
-        <div className={styles.menuItem}>Project</div>
-        <div className={styles.menuItem}>Line of time</div>
-        <div className={styles.menuItem}>Constellations</div>
-        <div className={styles.menuItem}>Summoning</div>
+        <Link href="tasks/Self-reflect">
+          <div className={styles.menuItem}>Self-reflect</div>
+        </Link>
+        <Link href="tasks/Project">
+          <div className={styles.menuItem}>Project</div>
+        </Link>
+        <Link href="tasks/Line of time">
+          <div className={styles.menuItem}>Line of time</div>
+        </Link>
+        <Link href="tasks/Constellations">
+          <div className={styles.menuItem}>Constellations</div>
+        </Link>
+        <Link href="tasks/Summoning">
+          <div className={styles.menuItem}>Summoning</div>
+        </Link>
       </div>
     </div>
   )
