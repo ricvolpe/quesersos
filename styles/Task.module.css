@@ -18,6 +18,30 @@
     border-radius: 10px;
 }
 
+.titledCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeCards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+.constellationCards {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    grid-column-gap: 200px;
+    align-items: center;
+}
+
+.person { grid-area: person; }
+
 .title {
     font-family: 'New Tegomin', serif;
 }

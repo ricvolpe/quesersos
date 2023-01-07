@@ -18,18 +18,20 @@ export default function Task(): JSX.Element {
             <div className={styles.explanation} >
                 Look at the cards and reflect how they may represent your past, present and future
             </div>
-            {cardNumbers.map((cardNumber: number, index: number) => {
-                return (
-                    <div key={`object-${index}`}>
-                        {timeHeadings[index]}
-                        <img
-                            className={styles.card}
-                            key={`image-${index}`}
-                            src={`/imgs/cards/${cardNumber}.png`}
-                        />
-                    </div>
-                )
-            })}
+            <div className={styles.timeCards}>
+                {cardNumbers.map((cardNumber: number, index: number) => {
+                    return (
+                        <div key={`object-${index}`} className={styles.titledCard}>
+                            {timeHeadings[index]}
+                            <img
+                                className={styles.card}
+                                key={`image-${index}`}
+                                src={`/imgs/cards/${cardNumber}.png`}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
             <Link href="/select">
                 <button>
                     Change task
