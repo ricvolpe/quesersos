@@ -12,7 +12,7 @@ export default function Task(): JSX.Element {
             {isSummoned ?
                 <React.Fragment>
                     <div className={styles.explanation} >
-                        Look at the cards and reflect what {person} may want to communicate to you
+                        Look at the card and reflect what {person} may want to communicate to you
                     </div>
                     <div className={styles.card}>Card Title</div>
                 </React.Fragment>
