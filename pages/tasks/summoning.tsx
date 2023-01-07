@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 export default function Task(): JSX.Element {
     const [isSummoned, summon] = useState(false)
     const [person, setPerson] = useState("")
+    const cardNumber = Math.floor(Math.random() * 59) + 1;
     return (
         <div className={styles.container}>
             <Title text="Summoning" color="#4D8C52" />
@@ -14,7 +15,7 @@ export default function Task(): JSX.Element {
                     <div className={styles.explanation} >
                         Look at the card and reflect what {person} may want to communicate to you
                     </div>
-                    <div className={styles.card}>Card Title</div>
+                    <img className={styles.card} src={`/imgs/cards/${cardNumber}.png`} />
                 </React.Fragment>
                 :
                 <div className={styles.selector}>
