@@ -16,6 +16,10 @@
 .card {
     border: 1px black solid;
     border-radius: 10px;
+    width: auto;
+    height: auto;
+    min-height: 170px;
+    min-width: 170px;
 }
 
 .titledCard {
@@ -32,6 +36,13 @@
     align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+    .timeCards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .constellationCards {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -40,7 +51,16 @@
     align-items: center;
 }
 
-.person { grid-area: person; }
+@media only screen and (max-width: 600px) {
+    .constellationCards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.person {
+    grid-area: person;
+}
 
 .title {
     font-family: 'New Tegomin', serif;
