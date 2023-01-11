@@ -1,7 +1,10 @@
+import React, { useState } from 'react'
+import Link from 'next/link'
+import ChangeTask from '../../components/ChangeTaskButton'
 import Title from '../../components/Title'
 import styles from '../../styles/Task.module.css'
-import Link from 'next/link'
-import React, { useState } from 'react'
+
+
 
 export default function Task(): JSX.Element {
     const [isChosen, choose] = useState(false)
@@ -23,7 +26,7 @@ export default function Task(): JSX.Element {
                     <div className={styles.explanation} >
                         Look at the cards and reflect what they may represent about each person or they may want to communicate with you
                     </div>
-                    <div className={styles.titledCard}>
+                    <div className={styles.cardAndTitle}>
                         {capitalizeFirstLetter(person)}
                         <img
                             className={styles.card}
@@ -32,14 +35,14 @@ export default function Task(): JSX.Element {
                     </div>
                     <div>
                         <div className={styles.constellationCards} >
-                            <div className={styles.titledCard}>
+                            <div className={styles.cardAndTitle}>
                                 Your mother
                                 <img
                                     className={styles.card}
                                     src={`/imgs/cards/${cardNumbers[1]}.png`}
                                 />
                             </div>
-                            <div className={styles.titledCard}>
+                            <div className={styles.cardAndTitle}>
                                 Your father
                                 <img
                                     className={styles.card}
@@ -48,10 +51,12 @@ export default function Task(): JSX.Element {
                             </div>
                         </div>
                     </div>
+                    <ChangeTask />
                 </React.Fragment>
                 :
                 <div className={styles.selector}>
-                    Choose a person of your family (alive or dead) that isn't your mather or father
+                    Choose a person of your family, alive or dead, that isn't your mather or father
+                    <hr />
                     <div>
                         <input
                             onChange={(e) => setPerson(e.target.value)}
@@ -61,12 +66,6 @@ export default function Task(): JSX.Element {
                     </div>
                 </div>
             }
-
-            <Link href="/select">
-                <button>
-                    Change task
-                </button>
-            </Link>
         </div >
     )
 }

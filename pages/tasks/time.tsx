@@ -1,6 +1,6 @@
+import ChangeTask from '../../components/ChangeTaskButton';
 import Title from '../../components/Title'
 import styles from '../../styles/Task.module.css'
-import Link from 'next/link'
 
 export default function Task(): JSX.Element {
     const noOfCards = 3;
@@ -21,7 +21,7 @@ export default function Task(): JSX.Element {
             <div className={styles.timeCards}>
                 {cardNumbers.map((cardNumber: number, index: number) => {
                     return (
-                        <div key={`object-${index}`} className={styles.titledCard}>
+                        <div key={`object-${index}`} className={styles.cardAndTitle}>
                             {timeHeadings[index]}
                             <img
                                 className={styles.card}
@@ -32,11 +32,7 @@ export default function Task(): JSX.Element {
                     )
                 })}
             </div>
-            <Link href="/select">
-                <button>
-                    Change task
-                </button>
-            </Link>
+            <ChangeTask />
         </div>
     )
 }
